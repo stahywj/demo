@@ -1,0 +1,21 @@
+<component name="libraryTable">
+  <library name="Maven: org.apache.tomcat:servlet-api:6.0.30">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/servlet-api/6.0.30/servlet-api-6.0.30.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/servlet-api/6.0.30/servlet-api-6.0.30-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/servlet-api/6.0.30/servlet-api-6.0.30-sources.jar!/" />
+      <root url="file://D:/software/apache-tomcat-8.0.36-src/java" />
+      <root url="file://D:/software/apache-tomcat-8.0.36-src/modules/jdbc-pool/src/main/java" />
+      <root url="file://D:/software/apache-tomcat-8.0.36-src/modules/jdbc-pool/src/test/java" />
+      <root url="file://D:/software/apache-tomcat-8.0.36-src/test" />
+      <root url="file://D:/software/apache-tomcat-8.0.36-src/webapps/docs/appdev/sample/src" />
+      <root url="file://D:/software/apache-tomcat-8.0.36-src/webapps/examples/WEB-INF/classes" />
+      <root url="file://D:/software/apache-tomcat-8.0.36-src/webapps/examples/WEB-INF/jsp/applet" />
+      <root url="file://D:/software/apache-tomcat-8.0.36-src/webapps/examples/jsp/plugin/applet" />
+    </SOURCES>
+  </library>
+</component>

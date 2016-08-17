@@ -1,0 +1,160 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+
+
+   <!-- <filter>
+        <filter-name>LoginFilter</filter-name>
+        <filter-class>filter.LoginFilter</filter-class>
+    </filter>
+    
+    <filter-mapping>
+        <filter-name>LoginFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>-->
+    <filter>
+        <filter-name>MessageFilter</filter-name>
+        <filter-class>filter.MessageFilter</filter-class>
+        <init-param>
+            <param-name>hello</param-name>
+            <param-value>world</param-value>
+        </init-param>
+    </filter>
+    <filter-mapping>
+        <filter-name>MessageFilter</filter-name>
+        <url-pattern>/messageLoginServlet</url-pattern>
+    </filter-mapping>
+
+
+
+    <listener>
+        <listener-class>listener.MyServletContextListener</listener-class>
+    </listener>
+    <listener>
+        <listener-class>listener.MyServletContextAttributeListener</listener-class>
+    </listener>
+    <listener>
+        <listener-class>listener.MySessionListener</listener-class>
+    </listener>
+
+
+
+    <servlet>
+        <servlet-name>HelloWorld</servlet-name>
+        <servlet-class>com.HelloWorldServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>aaa</servlet-name>
+        <servlet-class>com.DoubleColorBollServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>bbb</servlet-name>
+        <servlet-class>com.ForwardServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ser</servlet-name>
+        <servlet-class>com.LoginServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>user</servlet-name>
+        <servlet-class>com.userServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>init</servlet-name>
+        <servlet-class>Bean.InitServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>counter</servlet-name>
+        <servlet-class>Bean.CounterServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>userlogin</servlet-name>
+        <servlet-class>Bean.UserLoginServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>query</servlet-name>
+        <servlet-class>Bean.QueryServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>update</servlet-name>
+        <servlet-class>Bean.UpdateServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>mylogin</servlet-name>
+        <servlet-class>filter.MyLoginServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>myupdate</servlet-name>
+        <servlet-class>filter.MyUpdateServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>myquery</servlet-name>
+        <servlet-class>filter.MyQueryServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>message</servlet-name>
+        <servlet-class>com.messageLoginServlet</servlet-class>
+    </servlet>
+
+
+    <servlet-mapping>
+        <servlet-name>HelloWorld</servlet-name>
+        <url-pattern>/HelloWorld</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>aaa</servlet-name>
+        <url-pattern>/DoubleColorBollServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>bbb</servlet-name>
+        <url-pattern>/ForwardServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ser</servlet-name>
+        <url-pattern>/LoginServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>user</servlet-name>
+        <url-pattern>/userServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>init</servlet-name>
+        <url-pattern>/InitServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>counter</servlet-name>
+        <url-pattern>/CounterServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>userlogin</servlet-name>
+        <url-pattern>/session/UserLoginServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>query</servlet-name>
+        <url-pattern>/session/QueryServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>update</servlet-name>
+        <url-pattern>/session/UpdateServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>mylogin</servlet-name>
+        <url-pattern>/filter/MyLoginServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>myupdate</servlet-name>
+        <url-pattern>/filter/MyUpdateServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>myquery</servlet-name>
+        <url-pattern>/filter/MyQueryServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>message</servlet-name>
+        <url-pattern>/messageLoginServlet</url-pattern>
+    </servlet-mapping>
+
+
+</web-app>
