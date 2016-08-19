@@ -14,8 +14,6 @@ import testbean.Student;
 
 import java.io.Serializable;
 import java.util.Iterator;
-import java.util.List;
-
 
 
 /**
@@ -95,6 +93,7 @@ public class one2manyTest {
         transaction.commit();
         session.close();
         System.out.println("**********************");
+
         session = sessionFactory.openSession();
         Grade grade1 = (Grade) session.load(Grade.class, 1);
         System.out.println(grade1.getGname()+" ++++++++++++++ "+grade1.getGdesc());
