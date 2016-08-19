@@ -46,8 +46,8 @@ public class PersonTest {
 
     @After
     public void destory(){
-        transaction.commit();
-        session.close();
+//        transaction.commit();
+//        session.close();
         sessionFactory.close();
     }
 
@@ -75,8 +75,16 @@ public class PersonTest {
     @Test
     public void testGetPerson(){
         Person person = (Person)session.get(Person.class, 1);
-        session.delete(person);
-        System.out.println(person);
+        System.out.println(person.getName()+"-------------"+person.getAge());
+        transaction.commit();;
+        session.close();
+        System.out.println("**********************");
+        session = sessionFactory.openSession();
+        Person person1 = (Person)session.get(Person.class, 1);
+        System.out.println(person1.getName()+"-------------"+person1.getAge());
+        transaction = session.beginTransaction();
+        transaction.commit();
+        session.close();
     }
 
     @Test

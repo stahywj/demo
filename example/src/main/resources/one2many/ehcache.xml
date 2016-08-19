@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ehcache>
+    <diskStore path="user.dir"/>　　
+
+    　　<!--我们可以给每个实体类指定一个对应的缓存，如果没有匹配到该类，则使用这个默认的缓存配置-->
+    <defaultCache maxElementsInMemory="10000" eternal="false" timeToIdleSeconds="120" timeToLiveSeconds="120" overflowToDisk="true"/>
+    　<!--可以给每个实体类指定一个配置文件，通过name属性指定，要使用类的全名-->
+    <cache name="testbean.Grade" maxElementsInMemory="10000" eternal="false" timeToIdleSeconds="300" timeToLiveSeconds="600" overflowToDisk="true"/>
+    <cache name="testbean.Student" maxElementsInMemory="1000" eternal="true" timeToIdleSeconds="0" timeToLiveSeconds="0" overflowToDisk="false"/>
+</ehcache>

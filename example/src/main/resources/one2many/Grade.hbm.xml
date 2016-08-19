@@ -3,6 +3,7 @@
         "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
     <class name="testbean.Grade" table="grade">
+        <cache usage="read-only"/>
         <id name="gid" column="gid" type="java.lang.Integer">
             <generator class="increment"></generator>
         </id>

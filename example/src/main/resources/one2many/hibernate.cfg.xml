@@ -10,9 +10,17 @@
         <property name="connection.password">root</property>
         <property name="dialect">org.hibernate.dialect.MySQLDialect</property>
         <property name="show_sql">true</property>
-       <!-- <property name="format_sql">true</property>-->
-        <property name="hbm2ddl.auto">create</property>
+        <property name="format_sql">true</property>
+        <property name="hbm2ddl.auto">update</property>
         <!--<property name="default_schema">javademo</property>-->
+
+        <!--开启二级缓存-->
+        <property name="cache.use_second_level_cache">true</property>
+        <!--指定二级缓存的提供类-->
+        <!--<property name="hibernate.cache.provider_class">net.sf.ehcache.hibernate.EhCacheProvider</property>-->
+        <property name="hibernate.cache.region.factory_class">org.hibernate.cache.ehcache.EhCacheRegionFactory</property>
+        <!--二级缓存配置文件的位置-->
+        <property name="cache.provider_configuration_file_resource_path">one2many/ehcache.xml</property>
 
         <mapping resource="one2many/Grade.hbm.xml"/>
         <mapping resource="one2many/Student.hbm.xml"/>
