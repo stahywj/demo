@@ -102,6 +102,8 @@ public class one2manyTest {
         transaction.commit();
         session.close();
 
+
+
     }
 
 
